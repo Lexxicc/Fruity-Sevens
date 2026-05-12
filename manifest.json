@@ -1,0 +1,9 @@
+{
+  "name": "Fruity Sevens",
+  "short_name": "Fruity Sevens",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00111a",
+  "theme_color": "#c0392b",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
