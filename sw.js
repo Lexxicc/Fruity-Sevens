@@ -1,4 +1,4 @@
-const CACHE = 'fs-v1';
+const CACHE = 'f7-v1';
 const CDN = ['cdn.tailwindcss.com', 'fonts.googleapis.com', 'fonts.gstatic.com'];
 
 self.addEventListener('install', e => {
