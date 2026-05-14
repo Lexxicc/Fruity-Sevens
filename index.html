@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="lexxicc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Fruity Sevens v0.0.01</title>
+    <title>Fruity Sevens v0.0.02</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#c0392b">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,19 +18,19 @@
 
         :root {
             /* SoT (canonical menu spec) palette — used by the front menu only */
-            --color-bg-dark: #00111a;
-            --color-panel:   #00243a;
-            --color-primary: #00b4d8;
-            --color-shadow:  #000a10;
-            --color-glow:    #90e0ef;
-            --color-accent:  #48cae4;
+            --color-bg-dark: #010810;
+            --color-panel:   #061A2E;
+            --color-primary: #00BFFF;
+            --color-shadow:  #000508;
+            --color-glow:    #EAFAFF;
+            --color-accent:  #00E5FF;
 
             /* Legacy FF in-game tokens (kept for the slot machine UI; do not change) */
-            --nav-bg: #00243a;
-            --teal-primary: #00b4d8;
-            --teal-mid: #48cae4;
-            --teal-light: #90e0ef;
-            --win-teal: #00b4d8;
+            --nav-bg: #061A2E;
+            --teal-primary: #00BFFF;
+            --teal-mid: #00E5FF;
+            --teal-light: #EAFAFF;
+            --win-teal: #00BFFF;
             --gold: #ffd700;
             --sym-size: 96px;
             --peek-size: 59px;
@@ -40,8 +40,8 @@
         html { overflow-x: hidden; }
 
         body {
-            background-color: #00111a;
-            background-image: radial-gradient(circle at center, var(--nav-bg) 0%, #000a10 100%);
+            background-color: #010810;
+            background-image: radial-gradient(circle at center, var(--nav-bg) 0%, #000508 100%);
             font-family: 'Roboto', sans-serif;
             color: white;
             overflow: hidden;
@@ -230,7 +230,7 @@
 
         .sleek-btn:hover:not(:disabled) {
             background: var(--teal-primary);
-            color: #00243a;
+            color: #061A2E;
         }
 
         .sleek-btn:disabled {
@@ -274,7 +274,7 @@
 
         .hold-btn.active {
             background: var(--teal-primary);
-            color: #00243a;
+            color: #061A2E;
             box-shadow: 0 0 15px var(--teal-primary);
         }
 
@@ -338,14 +338,14 @@
             border: none;
             box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
             font-family: 'Bungee', cursive;
-            color: #00243a !important;
+            color: #061A2E !important;
             border-radius: 15px;
             min-height: 44px;
             touch-action: manipulation;
         }
 
         .info-modal-content {
-            background: #00111a;
+            background: #010810;
             border: 2px solid var(--teal-primary);
             max-width: 450px;
             width: 90%;
@@ -459,7 +459,7 @@
             justify-content: center;
             touch-action: manipulation;
         }
-        #menu-btn:hover { background: var(--teal-primary); color: #00243a; }
+        #menu-btn:hover { background: var(--teal-primary); color: #061A2E; }
         #menu-popover {
             position: absolute;
             top: 52px;
@@ -496,7 +496,7 @@
         .message-text {
             font-size: 0.75rem;
             font-weight: 300;
-            color: #90e0ef;
+            color: #EAFAFF;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             flex: 1;
@@ -662,12 +662,12 @@
                     </filter>
                     <filter id="logo_rf" x="-5%" y="-10%" width="110%" height="120%">
                       <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-                      <feFlood flood-color="#00b4d8" flood-opacity="0.4" result="color"/>
+                      <feFlood flood-color="#00BFFF" flood-opacity="0.4" result="color"/>
                       <feComposite in="color" in2="blur" operator="in" result="glow"/>
                       <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
                     </filter>
                     <linearGradient id="logo_tg" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stop-color="#caf0f8"/><stop offset="50%" stop-color="#90e0ef"/><stop offset="100%" stop-color="#48cae4"/>
+                      <stop offset="0%" stop-color="#caf0f8"/><stop offset="50%" stop-color="#EAFAFF"/><stop offset="100%" stop-color="#00E5FF"/>
                     </linearGradient>
                     <linearGradient id="logo_fruit" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%"   stop-color="#ff2222"/>
@@ -709,12 +709,12 @@
                   <!-- Title glow -->
                   <text class="ff-logo-tg" x="200" y="64" text-anchor="middle" font-family="'Fredoka One',cursive" font-size="52" fill="#ffcc00" filter="url(#logo_gf)" textLength="358" lengthAdjust="spacingAndGlyphs">FRUITY SEVENS</text>
                   <!-- Title shadow -->
-                  <text x="202" y="67" text-anchor="middle" font-family="'Fredoka One',cursive" font-size="52" fill="#000a10" opacity="0.85" textLength="358" lengthAdjust="spacingAndGlyphs">FRUITY SEVENS</text>
+                  <text x="202" y="67" text-anchor="middle" font-family="'Fredoka One',cursive" font-size="52" fill="#000508" opacity="0.85" textLength="358" lengthAdjust="spacingAndGlyphs">FRUITY SEVENS</text>
                   <!-- Title main -->
                   <text class="ff-logo-tm" x="200" y="64" text-anchor="middle" font-family="'Fredoka One',cursive" font-size="52" fill="url(#logo_fruit)" textLength="358" lengthAdjust="spacingAndGlyphs">FRUITY SEVENS</text>
 
                   <!-- Reel bezel -->
-                  <rect x="8" y="80" width="384" height="78" rx="10" fill="#001e30" stroke="#00b4d8" stroke-width="1.5" filter="url(#logo_rf)"/>
+                  <rect x="8" y="80" width="384" height="78" rx="10" fill="#001e30" stroke="#00BFFF" stroke-width="1.5" filter="url(#logo_rf)"/>
                   <rect x="11" y="83" width="378" height="72" rx="8" fill="#000d16"/>
                   <line x1="14" y1="84" x2="386" y2="84" stroke="rgba(0,180,216,0.15)" stroke-width="1"/>
                   <line x1="87"  y1="84" x2="87"  y2="154" stroke="#001828" stroke-width="1"/>
@@ -822,7 +822,7 @@
             <!-- ZONE 5 — FOOTER -->
             <div class="menu-footer">
                 <div class="footer-line left"></div>
-                <span class="footer-text">Tacticon Studios 2026 &middot; v0.0.01</span>
+                <span class="footer-text">Tacticon Studios 2026 &middot; v0.0.02</span>
                 <div class="footer-line right"></div>
             </div>
         </div>
@@ -834,18 +834,18 @@
                 <h2>How to Play</h2>
             </div>
             <div class="p-5 text-sm space-y-4" style="font-family:'VT323',monospace;color:#d1d5db;">
-                <div style="border:2px solid #00b4d8;padding:10px 12px;background:rgba(0,19,30,0.6)">
-                    <p style="color:#90e0ef;text-transform:uppercase;font-size:11px;letter-spacing:0.1em;font-weight:bold;margin-bottom:4px">The Basics</p>
-                    <p style="line-height:1.6">Match identical fruits along 5 lines. Lines pay <strong style="color:#00b4d8">both ways</strong> — left-to-right and right-to-left.</p>
+                <div style="border:2px solid #00BFFF;padding:10px 12px;background:rgba(0,19,30,0.6)">
+                    <p style="color:#EAFAFF;text-transform:uppercase;font-size:11px;letter-spacing:0.1em;font-weight:bold;margin-bottom:4px">The Basics</p>
+                    <p style="line-height:1.6">Match identical fruits along 5 lines. Lines pay <strong style="color:#00BFFF">both ways</strong> — left-to-right and right-to-left.</p>
                 </div>
                 <div>
-                    <h3 style="color:#90e0ef;text-transform:uppercase;font-weight:bold;border-bottom:1px solid #000a10;padding-bottom:4px;margin-bottom:8px">Actions</h3>
-                    <p>• <strong style="color:#00b4d8">Spin</strong> — costs 1 spin. Timer starts on your first spin.</p>
-                    <p>• <strong style="color:#00b4d8">Hold</strong> — lock a reel before the next spin. Costs 1 Hold.</p>
-                    <p>• <strong style="color:#00b4d8">Nudge</strong> — shift a reel up or down one symbol. Free, limited supply.</p>
+                    <h3 style="color:#EAFAFF;text-transform:uppercase;font-weight:bold;border-bottom:1px solid #000508;padding-bottom:4px;margin-bottom:8px">Actions</h3>
+                    <p>• <strong style="color:#00BFFF">Spin</strong> — costs 1 spin. Timer starts on your first spin.</p>
+                    <p>• <strong style="color:#00BFFF">Hold</strong> — lock a reel before the next spin. Costs 1 Hold.</p>
+                    <p>• <strong style="color:#00BFFF">Nudge</strong> — shift a reel up or down one symbol. Free, limited supply.</p>
                 </div>
                 <div>
-                    <h3 style="color:#90e0ef;text-transform:uppercase;font-weight:bold;border-bottom:1px solid #000a10;padding-bottom:4px;margin-bottom:8px">Ending the Game</h3>
+                    <h3 style="color:#EAFAFF;text-transform:uppercase;font-weight:bold;border-bottom:1px solid #000508;padding-bottom:4px;margin-bottom:8px">Ending the Game</h3>
                     <p>• Run out of spins, or let the 5-minute timer hit zero.</p>
                     <p>• Your final score is saved to High Scores.</p>
                 </div>
@@ -860,7 +860,7 @@
                 <h2>High Scores</h2>
             </div>
             <div class="p-5" id="ff-highscore-list">
-                <p style="text-align:center;color:#00b4d8;opacity:0.5;font-size:0.875rem;margin-top:32px">No scores recorded yet.</p>
+                <p style="text-align:center;color:#00BFFF;opacity:0.5;font-size:0.875rem;margin-top:32px">No scores recorded yet.</p>
             </div>
             <div class="subpanel-footer"></div>
         </div>
@@ -883,34 +883,34 @@
             </div>
             <div class="p-6 space-y-6" style="font-family:'VT323',monospace;">
                 <div>
-                    <h3 style="color:#90e0ef;text-transform:uppercase;font-weight:bold;font-size:0.875rem;border-bottom:1px solid #000a10;padding-bottom:8px;margin-bottom:16px;letter-spacing:0.1em">Audio</h3>
-                    <div class="flex items-center justify-between py-2" style="border-bottom:1px solid #000a10">
+                    <h3 style="color:#EAFAFF;text-transform:uppercase;font-weight:bold;font-size:0.875rem;border-bottom:1px solid #000508;padding-bottom:8px;margin-bottom:16px;letter-spacing:0.1em">Audio</h3>
+                    <div class="flex items-center justify-between py-2" style="border-bottom:1px solid #000508">
                         <span style="color:#d1d5db">SFX Volume</span>
                         <div class="flex items-center gap-3">
                             <input type="range" id="vol-slider" min="0" max="100" value="100"
                                    oninput="updateVolume(this.value)"
-                                   style="accent-color:#00b4d8;width:120px">
-                            <span id="vol-val" style="color:#90e0ef;width:40px;text-align:right">100%</span>
+                                   style="accent-color:#00BFFF;width:120px">
+                            <span id="vol-val" style="color:#EAFAFF;width:40px;text-align:right">100%</span>
                         </div>
                     </div>
                     <div class="flex items-center justify-between py-2">
                         <span style="color:#d1d5db">Sound Effects</span>
                         <button id="sfx-toggle" onclick="toggleSFX()"
                                 style="padding:4px 12px;text-transform:uppercase;font-weight:bold;
-                                       font-family:'VT323',monospace;border:4px solid #00b4d8;
-                                       background:#00243a;color:#90e0ef;
-                                       box-shadow:inset -2px -2px 0px #000a10;cursor:pointer;">ON</button>
+                                       font-family:'VT323',monospace;border:4px solid #00BFFF;
+                                       background:#061A2E;color:#EAFAFF;
+                                       box-shadow:inset -2px -2px 0px #000508;cursor:pointer;">ON</button>
                     </div>
                 </div>
                 <div>
-                    <h3 style="color:#90e0ef;text-transform:uppercase;font-weight:bold;font-size:0.875rem;border-bottom:1px solid #000a10;padding-bottom:8px;margin-bottom:16px;letter-spacing:0.1em">Display</h3>
+                    <h3 style="color:#EAFAFF;text-transform:uppercase;font-weight:bold;font-size:0.875rem;border-bottom:1px solid #000508;padding-bottom:8px;margin-bottom:16px;letter-spacing:0.1em">Display</h3>
                     <div class="flex items-center justify-between py-2">
                         <span style="color:#d1d5db">Brightness</span>
                         <div class="flex items-center gap-3">
                             <input type="range" id="brightness-slider" min="20" max="100" value="100"
                                    oninput="updateBrightness(this.value)"
-                                   style="accent-color:#00b4d8;width:120px">
-                            <span id="brightness-val" style="color:#90e0ef;width:40px;text-align:right">100%</span>
+                                   style="accent-color:#00BFFF;width:120px">
+                            <span id="brightness-val" style="color:#EAFAFF;width:40px;text-align:right">100%</span>
                         </div>
                     </div>
                 </div>
@@ -1125,7 +1125,10 @@
         <div id="bonus-content" class="info-modal-content overflow-hidden border-yellow-500/60 flex flex-col items-stretch" style="max-width:440px;width:94%;max-height:92dvh">
             <div class="bg-gradient-to-r from-yellow-900/40 to-amber-900/40 p-3 flex justify-between items-center border-b border-yellow-500/40">
                 <h3 class="font-bold text-lg uppercase Orbitron text-yellow-300 tracking-widest">Bonus Round</h3>
-                <div class="text-yellow-400 font-bold text-sm">×15 MULT</div>
+                <div class="flex items-center gap-3">
+                    <div class="text-yellow-400 font-bold text-sm">×15 MULT</div>
+                    <button onclick="closeBonusEarly()" class="text-2xl font-light text-yellow-400/60 hover:text-yellow-300 leading-none" title="End bonus early">&times;</button>
+                </div>
             </div>
             <div id="bonus-banner" class="text-center py-2 text-yellow-300 text-sm font-bold tracking-wider"></div>
             <div class="flex justify-around items-center py-2 text-[11px] uppercase tracking-wider">
@@ -2063,6 +2066,12 @@
             document.querySelectorAll('.bonus-symbol.win-highlight').forEach(s => s.classList.remove('win-highlight'));
         }
 
+        function closeBonusEarly() {
+            if (!bonusActive) return;
+            bonusSpinsLeft = 0;
+            if (!bonusIsSpinning) bonusEnd();
+        }
+
         function bonusEnd() {
             if (!bonusActive) return;
             const earned = bonusScore;
@@ -2130,7 +2139,7 @@
                 sub.innerText = 'Absolute legend. Your score:';
             } else if (s >= 200) {
                 title.innerText = 'Big Win!';
-                title.style.color = '#00b4d8';
+                title.style.color = '#00BFFF';
                 sub.innerText = 'Smashed it. Your score:';
             } else if (s >= 50) {
                 title.innerText = 'Nice!';
@@ -2213,6 +2222,7 @@
         }
 
         const PATCH_NOTES = [
+            { v:'v0.0.02', date:'2026-05', notes:['Colour scheme updated from Arctic to Permafrost: deeper darks (#010810 bg, #061A2E panel), electric brights (#00BFFF primary, #00E5FF accent, #EAFAFF glow). 59 token replacements.']},
             { v:'v0.0.01', date:'2026-05', notes:['Forked from Fruit Fight v0.0.57. Fruity Sevens begins here.'] },
         ];
 
@@ -2222,21 +2232,21 @@
                 const stats = JSON.parse(localStorage.getItem(FF_KEY) || '{}');
                 const history = (stats.history || []).slice(0, 10);
                 if (!history.length) {
-                    el.innerHTML = `<p style="text-align:center;color:#00b4d8;opacity:0.5;font-size:0.875rem;margin-top:32px">No scores recorded yet.</p>`;
+                    el.innerHTML = `<p style="text-align:center;color:#00BFFF;opacity:0.5;font-size:0.875rem;margin-top:32px">No scores recorded yet.</p>`;
                     return;
                 }
                 const sorted = [...history].sort((a,b) => b.score - a.score);
                 el.innerHTML = sorted.map((s, i) => {
                     const d = new Date(s.date).toLocaleDateString();
                     const badge = s.isChallenge ? `<span style="color:#ffd700;font-size:0.7rem;margin-left:4px">[C]</span>` : '';
-                    return `<div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid #000a10;font-size:0.875rem">
-                        <span style="color:#00b4d8;width:24px;text-align:right">${i+1}.</span>
+                    return `<div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid #000508;font-size:0.875rem">
+                        <span style="color:#00BFFF;width:24px;text-align:right">${i+1}.</span>
                         <span style="flex:1;color:#fff">${escHtml(String(s.score))}${badge}</span>
-                        <span style="color:#00b4d8;opacity:0.5;font-size:0.75rem">${escHtml(d)}</span>
+                        <span style="color:#00BFFF;opacity:0.5;font-size:0.75rem">${escHtml(d)}</span>
                     </div>`;
                 }).join('');
             } catch(e) {
-                el.innerHTML = `<p style="text-align:center;color:#00b4d8;opacity:0.5;font-size:0.875rem;margin-top:32px">No scores recorded yet.</p>`;
+                el.innerHTML = `<p style="text-align:center;color:#00BFFF;opacity:0.5;font-size:0.875rem;margin-top:32px">No scores recorded yet.</p>`;
             }
         }
 
@@ -2245,8 +2255,8 @@
             el.innerHTML = PATCH_NOTES.map(p => `
                 <div>
                     <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px">
-                        <span style="color:#90e0ef;font-weight:bold">${escHtml(p.v)}</span>
-                        <span style="color:#00b4d8;opacity:0.6;font-size:10px">${escHtml(p.date)}</span>
+                        <span style="color:#EAFAFF;font-weight:bold">${escHtml(p.v)}</span>
+                        <span style="color:#00BFFF;opacity:0.6;font-size:10px">${escHtml(p.date)}</span>
                     </div>
                     <ul style="margin:0;padding:0;list-style:none">
                         ${p.notes.map(n => `<li style="color:#d1d5db">• ${escHtml(n)}</li>`).join('')}
@@ -2385,7 +2395,7 @@
               </filter>
               <filter id="logo_rf" x="-5%" y="-10%" width="110%" height="120%">
                 <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-                <feFlood flood-color="#00b4d8" flood-opacity="0.4" result="color"/>
+                <feFlood flood-color="#00BFFF" flood-opacity="0.4" result="color"/>
                 <feComposite in="color" in2="blur" operator="in" result="glow"/>
                 <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
               </filter>
@@ -2405,9 +2415,9 @@
               <clipPath id="logo_rc"><rect x="11" y="73" width="378" height="86" rx="8"/></clipPath>
             </defs>
             <text class="ff-logo-tg" x="200" y="60" text-anchor="middle" font-family="'Fredoka One',cursive" font-size="52" fill="#ffcc00" filter="url(#logo_gf)" textLength="358" lengthAdjust="spacingAndGlyphs">FRUITY SEVENS</text>
-            <text x="202" y="63" text-anchor="middle" font-family="'Fredoka One',cursive" font-size="52" fill="#000a10" opacity="0.85" textLength="358" lengthAdjust="spacingAndGlyphs">FRUITY SEVENS</text>
+            <text x="202" y="63" text-anchor="middle" font-family="'Fredoka One',cursive" font-size="52" fill="#000508" opacity="0.85" textLength="358" lengthAdjust="spacingAndGlyphs">FRUITY SEVENS</text>
             <text class="ff-logo-tm" x="200" y="60" text-anchor="middle" font-family="'Fredoka One',cursive" font-size="52" fill="url(#logo_fruit)" textLength="358" lengthAdjust="spacingAndGlyphs">FRUITY SEVENS</text>
-            <rect x="8" y="70" width="384" height="92" rx="10" fill="#001e30" stroke="#00b4d8" stroke-width="1.5" filter="url(#logo_rf)"/>
+            <rect x="8" y="70" width="384" height="92" rx="10" fill="#001e30" stroke="#00BFFF" stroke-width="1.5" filter="url(#logo_rf)"/>
             <rect x="11" y="73" width="378" height="86" rx="8" fill="#000d16"/>
             <line x1="14" y1="74" x2="386" y2="74" stroke="rgba(0,180,216,0.15)" stroke-width="1"/>
             <line x1="137" y1="73" x2="137" y2="159" stroke="#001828" stroke-width="2"/>
